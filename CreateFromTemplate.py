@@ -4,7 +4,7 @@ from tkinter import *
 import os
 
 base = os.environ['USERPROFILE'] + '\\Desktop\\'
-template = base + 'New folder\\py-word-gen\\word_template.docx'
+template = base + 'telus-extra-work\\py-word-gen\\word_template.docx'
 
 def submitPressed():
     # Document Creation
