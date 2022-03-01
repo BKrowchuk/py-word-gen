@@ -1,17 +1,20 @@
 from tkinter import font
 from docxtpl import DocxTemplate
 from tkinter import *
+import os
 
+base = os.environ['USERPROFILE'] + '\\Desktop\\'
+template = base + 'New folder\\py-word-gen\\word_template.docx'
 
 def submitPressed():
     # Document Creation
     doc_title=dTitle.get()
-    doc = DocxTemplate("word_template.docx")
+    doc = DocxTemplate(template)
     context = { 'name' : dName.get(),
     'location': dLocation.get(),
     'ip': dIP.get() }
     doc.render(context)
-    doc.save(doc_title + ".docx")
+    doc.save(base + doc_title + ".docx")
     window.destroy()
 
 wHeight = 325
